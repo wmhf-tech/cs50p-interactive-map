@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import QuizPage from "./pages/QuizPage";
 import ProfilePage from "./pages/ProfilePage";
+import ConnectionStatus from "./components/ConnectionStatus";
 import { useServiceWorker } from "./hooks/useServiceWorker";
 
 
@@ -41,6 +42,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <ConnectionStatus />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

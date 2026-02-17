@@ -5,6 +5,7 @@ import { Progress } from '@/components/ui/progress';
 import { CheckCircle, XCircle, Clock } from 'lucide-react';
 import { getRandomQuestions, QuizQuestion } from '@/data/quizData';
 import { useUserProfile } from '@/hooks/useUserProfile';
+import { useOfflineSync } from '@/hooks/useOfflineSync';
 import { toast } from 'sonner';
 
 interface QuizProps {
@@ -21,6 +22,7 @@ export default function Quiz({ aula, onComplete, onClose }: QuizProps) {
   const [tempoInicio, setTempoInicio] = useState<number>(Date.now());
   const [tempoDecorrido, setTempoDecorrido] = useState(0);
   const { addQuizResult } = useUserProfile();
+  const { saveForSync, isOnline } = useOfflineSync();
 
   useEffect(() => {
     // Carregar perguntas
@@ -77,7 +79,7 @@ export default function Quiz({ aula, onComplete, onClose }: QuizProps) {
     }
   };
 
-  const finalizarQuiz = () => {
+  const finalizarQuiz = async () => {
     let acertos = 0;
     questions.forEach((q, i) => {
       if (respostas[i] === q.resposta_correta) {
@@ -87,7 +89,25 @@ export default function Quiz({ aula, onComplete, onClose }: QuizProps) {
 
     setMostrarResultado(true);
 
-    // Registrar resultado
+    const resultData = {
+      aula,
+      pontuacao: acertos,
+      total_perguntas: questions.length,
+      data: new Date().toISOString(),
+      tempo_decorrido: tempoDecorrido,
+      respostas: respostas,
+    };
+
+    try {
+      await saveForSync('quiz_response', resultData);
+      
+      if (!isOnline) {
+        toast.success('Quiz salvo offline. Sera sincronizado quando conectado!');
+      }
+    } catch (error) {
+      console.error('Erro ao salvar quiz offline:', error);
+    }
+
     if (aula !== undefined) {
       addQuizResult({
         aula,
