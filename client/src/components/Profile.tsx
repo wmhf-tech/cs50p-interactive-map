@@ -51,35 +51,36 @@ export default function Profile({ onClose }: ProfileProps) {
   return (
     <div className="w-full max-w-2xl mx-auto p-6 space-y-6">
       {/* Header do Perfil */}
-      <Card className="p-6">
-        <div className="flex items-start justify-between mb-6">
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <User className="w-8 h-8 text-white" />
+      <Card className="p-4 sm:p-6">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+          <div className="flex items-center gap-3 sm:gap-4 flex-1">
+            <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+              <User className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
             </div>
-            <div className="flex-1">
+            <div className="flex-1 min-w-0">
               {editMode ? (
                 <div className="space-y-3">
                   <Input
                     value={nome}
                     onChange={(e) => setNome(e.target.value)}
                     placeholder="Seu nome"
-                    className="font-semibold"
+                    className="font-semibold h-10"
                   />
                   <Input
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="seu@email.com"
                     type="email"
+                    className="h-10"
                   />
                 </div>
               ) : (
                 <div>
-                  <h2 className="text-2xl font-bold">{profile.nome}</h2>
+                  <h2 className="text-xl sm:text-2xl font-bold truncate">{profile.nome}</h2>
                   {profile.email && (
-                    <p className="text-muted-foreground flex items-center gap-2 mt-1">
-                      <Mail className="w-4 h-4" />
-                      {profile.email}
+                    <p className="text-sm text-muted-foreground flex items-center gap-2 mt-1 truncate">
+                      <Mail className="w-4 h-4 flex-shrink-0" />
+                      <span className="truncate">{profile.email}</span>
                     </p>
                   )}
                 </div>
@@ -87,12 +88,12 @@ export default function Profile({ onClose }: ProfileProps) {
             </div>
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2 self-start sm:self-auto">
             {editMode ? (
               <>
-                <Button size="sm" onClick={handleSalvar} className="gap-2">
+                <Button size="sm" onClick={handleSalvar} className="gap-2 h-10 px-4">
                   <Save className="w-4 h-4" />
-                  Salvar
+                  <span className="hidden sm:inline">Salvar</span>
                 </Button>
                 <Button
                   size="sm"
@@ -102,6 +103,7 @@ export default function Profile({ onClose }: ProfileProps) {
                     setNome(profile.nome);
                     setEmail(profile.email);
                   }}
+                  className="h-10 w-10 p-0"
                 >
                   <X className="w-4 h-4" />
                 </Button>
@@ -111,17 +113,17 @@ export default function Profile({ onClose }: ProfileProps) {
                 size="sm"
                 variant="outline"
                 onClick={() => setEditMode(true)}
-                className="gap-2"
+                className="gap-2 h-10 px-4"
               >
                 <Edit2 className="w-4 h-4" />
-                Editar
+                <span className="hidden sm:inline">Editar</span>
               </Button>
             )}
           </div>
         </div>
 
         {/* Nível e Pontos */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-2 sm:gap-4">
           <div className="text-center p-3 rounded-lg bg-muted">
             <Badge className={`${getNivelColor(profile.nivel)} mb-2 block w-fit mx-auto`}>
               {profile.nivel.charAt(0).toUpperCase() + profile.nivel.slice(1)}
@@ -146,7 +148,7 @@ export default function Profile({ onClose }: ProfileProps) {
           Estatísticas
         </h3>
 
-        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
           <div className="p-4 rounded-lg border">
             <p className="text-sm text-muted-foreground mb-1">Quizzes Completados</p>
             <p className="text-2xl font-bold">{profile.quizzes_completados}</p>
@@ -181,7 +183,7 @@ export default function Profile({ onClose }: ProfileProps) {
             Aulas Exploradas
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
             {Array.from({ length: 10 }).map((_, i) => (
               <div
                 key={i}
