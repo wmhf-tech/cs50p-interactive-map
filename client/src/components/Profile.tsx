@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,11 +11,17 @@ interface ProfileProps {
 }
 
 export default function Profile({ onClose }: ProfileProps) {
-  const { profile, updateNome, updateEmail, getStatistics, resetProfile } = useUserProfile();
+  const { profile, updateNome, updateEmail, getStatistics, resetProfile, isLoaded } = useUserProfile();
   const [editMode, setEditMode] = useState(false);
   const [nome, setNome] = useState(profile.nome);
   const [email, setEmail] = useState(profile.email);
   const stats = getStatistics();
+
+  // Sincronizar estados locais quando o profile for carregado ou atualizado
+  useEffect(() => {
+    setNome(profile.nome);
+    setEmail(profile.email);
+  }, [profile.nome, profile.email]);
 
   const handleSalvar = () => {
     if (nome.trim()) {
