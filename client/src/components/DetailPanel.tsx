@@ -2,6 +2,7 @@ import { ConceptDetail } from "@/data/conceptDetails";
 import { X, Copy, Check } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 
 interface DetailPanelProps {
   concept: ConceptDetail | null;
@@ -35,16 +36,25 @@ export default function DetailPanel({ concept, onClose }: DetailPanelProps) {
     <div className="flex flex-col w-96 bg-white dark:bg-slate-800 border-l border-slate-200 dark:border-slate-700 shadow-lg dark:shadow-2xl overflow-hidden transition-colors duration-300">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-700 dark:to-indigo-700 text-white p-4 flex items-center justify-between transition-colors duration-300">
-        <div className="flex-1">
+        <div className="flex-1 pr-2">
           <h2 className="text-lg font-bold">{concept.title}</h2>
           <p className="text-sm opacity-90">{concept.description}</p>
         </div>
-        <button
-          onClick={onClose}
-          className="ml-2 p-1 hover:bg-white/20 rounded transition-colors"
-        >
-          <X size={20} />
-        </button>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={onClose}
+              className="h-8 w-8 p-0 ml-2 hover:bg-white/20 text-white flex-shrink-0"
+            >
+              <X size={20} />
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent side="left" className="bg-slate-800 text-slate-200 border-slate-700">
+            <p>Fechar Painel</p>
+          </TooltipContent>
+        </Tooltip>
       </div>
 
       {/* Content */}
