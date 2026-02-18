@@ -59,7 +59,7 @@ export default function Home() {
             </div>
 
             {/* Controles de Zoom e Navegação */}
-            <div className="flex items-center gap-2">
+            <div className="flex flex-row flex-nowrap items-center gap-2">
               <div className="flex items-center gap-2 bg-slate-800 rounded-lg p-2">
                 <Button
                   variant="ghost"
