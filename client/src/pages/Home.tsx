@@ -1,6 +1,6 @@
 import MindmapNode from "@/components/MindmapNode";
 import DetailPanel from "@/components/DetailPanel";
-import ThemeToggle from "@/components/ThemeToggle";
+
 import { mindmapData } from "@/data/mindmapData";
 import { ConceptDetail } from "@/data/conceptDetails";
 import { Button } from "@/components/ui/button";
@@ -59,19 +59,18 @@ export default function Home() {
             </div>
 
             {/* Controles de Zoom e Navegação */}
-            <div className="flex items-center gap-2 flex-wrap" style={{height: '87px', width: '336px', borderStyle: 'none'}}>
-              <ThemeToggle />
-              <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 rounded-lg p-2 transition-colors duration-300">
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-slate-800 rounded-lg p-2">
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={handleZoomOut}
                   disabled={scale <= 0.7}
-                  className="h-8 w-8 p-0"
+                  className="h-10 w-10 p-0 hover:bg-slate-700"
                 >
-                  <ZoomOut size={16} />
+                  <ZoomOut size={20} />
                 </Button>
-                <span className="text-sm font-medium w-12 text-center">
+                <span className="text-sm font-medium w-14 text-center text-slate-200">
                   {Math.round(scale * 100)}%
                 </span>
                 <Button
@@ -79,37 +78,38 @@ export default function Home() {
                   size="sm"
                   onClick={handleZoomIn}
                   disabled={scale >= 1.5}
-                  className="h-8 w-8 p-0"
+                  className="h-10 w-10 p-0 hover:bg-slate-700"
                 >
-                  <ZoomIn size={16} />
+                  <ZoomIn size={20} />
                 </Button>
-                <div className="w-px h-6 bg-slate-300 mx-1" style={{marginRight: '2px', marginLeft: '2px'}} />
+                <div className="w-px h-6 bg-slate-600 mx-2" />
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={handleReset}
-                  className="h-8 px-2 text-xs" style={{fontWeight: '400'}}
+                  className="h-10 px-3 text-sm hover:bg-slate-700 text-slate-200"
                 >
                   Reset
+                </Button>
+                <div className="w-px h-6 bg-slate-600 mx-2" />
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setLocation('/profile')}
+                  className="h-10 w-10 p-0 hover:bg-slate-700"
+                  title="Perfil"
+                >
+                  <User size={20} />
                 </Button>
               </div>
               <Button
                 variant="outline"
                 size="sm"
                 onClick={() => setLocation('/quiz')}
-                className="gap-2"
+                className="h-10 gap-2 bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-200"
               >
-                <BarChart3 size={16} />
-                <span className="hidden sm:inline">Quiz</span>
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => setLocation('/profile')}
-                className="gap-2"
-              >
-                <User size={16} />
-                <span className="hidden sm:inline">Perfil</span>
+                <BarChart3 size={20} />
+                <span>Quiz</span>
               </Button>
             </div>
           </div>
