@@ -50,7 +50,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4 sm:py-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h1 className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+              <h1 className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent" style={{textAlign: 'center'}}>
                 CS50P Mind Map
               </h1>
               <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-1">
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
 
             {/* Controles de Zoom e Navegação */}
-            <div className="flex items-center gap-2 flex-wrap">
+            <div className="flex items-center gap-2 flex-wrap" style={{height: '87px'}} style={{width: '336px', borderStyle: 'none'}}>
               <ThemeToggle />
               <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 rounded-lg p-2 transition-colors duration-300">
                 <Button
@@ -83,12 +83,12 @@ export default function Home() {
                 >
                   <ZoomIn size={16} />
                 </Button>
-                <div className="w-px h-6 bg-slate-300 mx-1" />
+                <div className="w-px h-6 bg-slate-300 mx-1" style={{marginRight: '2px', marginLeft: '2px'}} />
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={handleReset}
-                  className="h-8 px-2 text-xs"
+                  className="h-8 px-2 text-xs" style={{fontWeight: '400'}}
                 >
                   Reset
                 </Button>
