@@ -124,7 +124,7 @@ export default function Home() {
                     variant="ghost"
                     size="sm"
                     onClick={() => setLocation('/profile')}
-                    className="h-8 w-8 sm:h-10 sm:w-10 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
+                    className="h-8 w-8 sm:h-11 sm:w-11 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
                   >
                     <User className="w-4 h-4 sm:w-5 sm:h-5" />
                   </Button>
@@ -141,7 +141,7 @@ export default function Home() {
                     variant="ghost"
                     size="sm"
                     onClick={() => setLocation('/quiz')}
-                    className="h-8 w-8 sm:h-10 sm:w-10 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
+                    className="h-8 w-8 sm:h-11 sm:w-11 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
                   >
                     <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" />
                   </Button>
