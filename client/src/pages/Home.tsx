@@ -51,7 +51,7 @@ export default function Home() {
         <div className="container mx-auto px-2 sm:px-4 py-3 sm:py-4 lg:py-6">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
             <div className="text-center sm:text-left">
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent" style={{textAlign: 'center'}}>
                 CS50P Mind Map
               </h1>
               <p className="text-xs sm:text-sm lg:text-base text-slate-600 dark:text-slate-400 mt-1">
@@ -62,7 +62,7 @@ export default function Home() {
             {/* Controles de Zoom e Navegação */}
             <div className="flex flex-row flex-wrap sm:flex-nowrap items-center justify-center sm:justify-end gap-2 sm:gap-3">
               {/* Container de Zoom */}
-              <div className="flex items-center gap-1 sm:gap-2 bg-slate-800 rounded-lg p-1.5 sm:p-2">
+              <div className="flex items-center gap-1 sm:gap-2 bg-slate-800 rounded-lg p-1.5 sm:p-2" style={{height: '44px'}}>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button
