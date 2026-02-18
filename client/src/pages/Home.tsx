@@ -4,6 +4,7 @@ import DetailPanel from "@/components/DetailPanel";
 import { mindmapData } from "@/data/mindmapData";
 import { ConceptDetail } from "@/data/conceptDetails";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
 import { Download, ZoomIn, ZoomOut, BarChart3, User } from "lucide-react";
 import { useState } from "react";
 import { useLocation } from "wouter";
@@ -62,63 +63,93 @@ export default function Home() {
             <div className="flex flex-row flex-wrap sm:flex-nowrap items-center justify-center sm:justify-end gap-2 sm:gap-3">
               {/* Container de Zoom */}
               <div className="flex items-center gap-1 sm:gap-2 bg-slate-800 rounded-lg p-1.5 sm:p-2">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={handleZoomOut}
-                  disabled={scale <= 0.7}
-                  className="h-8 w-8 sm:h-10 sm:w-10 p-0 hover:bg-slate-700"
-                  title="Diminuir Zoom"
-                >
-                  <ZoomOut className="w-4 h-4 sm:w-5 sm:h-5" />
-                </Button>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleZoomOut}
+                      disabled={scale <= 0.7}
+                      className="h-8 w-8 sm:h-10 sm:w-10 p-0 hover:bg-slate-700"
+                    >
+                      <ZoomOut className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="bg-slate-800 text-slate-200 border-slate-700">
+                    <p>Diminuir Zoom</p>
+                  </TooltipContent>
+                </Tooltip>
                 <span className="text-xs sm:text-sm font-medium w-10 sm:w-14 text-center text-slate-200">
                   {Math.round(scale * 100)}%
                 </span>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={handleZoomIn}
-                  disabled={scale >= 1.5}
-                  className="h-8 w-8 sm:h-10 sm:w-10 p-0 hover:bg-slate-700"
-                  title="Aumentar Zoom"
-                >
-                  <ZoomIn className="w-4 h-4 sm:w-5 sm:h-5" />
-                </Button>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleZoomIn}
+                      disabled={scale >= 1.5}
+                      className="h-8 w-8 sm:h-10 sm:w-10 p-0 hover:bg-slate-700"
+                    >
+                      <ZoomIn className="w-4 h-4 sm:w-5 sm:h-5" />
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="bg-slate-800 text-slate-200 border-slate-700">
+                    <p>Aumentar Zoom</p>
+                  </TooltipContent>
+                </Tooltip>
                 <div className="w-px h-4 sm:h-6 bg-slate-600 mx-1 sm:mx-2" />
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={handleReset}
-                  className="h-8 sm:h-10 px-2 sm:px-3 text-xs sm:text-sm hover:bg-slate-700 text-slate-200"
-                  title="Resetar Zoom"
-                >
-                  <span className="hidden xs:inline">Reset</span>
-                  <span className="inline xs:hidden">↻</span>
-                </Button>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleReset}
+                      className="h-8 sm:h-10 px-2 sm:px-3 text-xs sm:text-sm hover:bg-slate-700 text-slate-200"
+                    >
+                      <span className="hidden xs:inline">Reset</span>
+                      <span className="inline xs:hidden">↻</span>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="bg-slate-800 text-slate-200 border-slate-700">
+                    <p>Resetar Zoom (100%)</p>
+                  </TooltipContent>
+                </Tooltip>
               </div>
               
               {/* Container de Perfil */}
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setLocation('/profile')}
-                className="h-8 w-8 sm:h-10 sm:w-10 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
-                title="Perfil do Usuário"
-              >
-                <User className="w-4 h-4 sm:w-5 sm:h-5" />
-              </Button>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setLocation('/profile')}
+                    className="h-8 w-8 sm:h-10 sm:w-10 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
+                  >
+                    <User className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent side="bottom" className="bg-slate-800 text-slate-200 border-slate-700">
+                  <p>Perfil do Usuário</p>
+                </TooltipContent>
+              </Tooltip>
               
               {/* Container de Quiz */}
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setLocation('/quiz')}
-                className="h-8 w-8 sm:h-10 sm:w-10 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
-                title="Testar Conhecimentos"
-              >
-                <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" />
-              </Button>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setLocation('/quiz')}
+                    className="h-8 w-8 sm:h-10 sm:w-10 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
+                  >
+                    <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent side="bottom" className="bg-slate-800 text-slate-200 border-slate-700">
+                  <p>Testar Conhecimentos</p>
+                </TooltipContent>
+              </Tooltip>
             </div>
           </div>
         </div>
