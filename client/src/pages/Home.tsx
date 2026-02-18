@@ -59,7 +59,8 @@ export default function Home() {
             </div>
 
             {/* Controles de Zoom e Navegação */}
-            <div className="flex flex-row flex-nowrap items-center gap-2">
+            <div className="flex flex-row flex-nowrap items-center gap-3">
+              {/* Container de Zoom */}
               <div className="flex items-center gap-2 bg-slate-800 rounded-lg p-2">
                 <Button
                   variant="ghost"
@@ -91,25 +92,28 @@ export default function Home() {
                 >
                   Reset
                 </Button>
-                <div className="w-px h-6 bg-slate-600 mx-2" />
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setLocation('/profile')}
-                  className="h-10 w-10 p-0 hover:bg-slate-700"
-                  title="Perfil"
-                >
-                  <User size={20} />
-                </Button>
               </div>
+              
+              {/* Container de Perfil */}
               <Button
-                variant="outline"
+                variant="ghost"
+                size="sm"
+                onClick={() => setLocation('/profile')}
+                className="h-10 w-10 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
+                title="Perfil"
+              >
+                <User size={20} />
+              </Button>
+              
+              {/* Container de Quiz */}
+              <Button
+                variant="ghost"
                 size="sm"
                 onClick={() => setLocation('/quiz')}
-                className="h-10 gap-2 bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-200"
+                className="h-10 w-10 p-0 bg-slate-800 hover:bg-slate-700 rounded-lg"
+                title="Quiz"
               >
                 <BarChart3 size={20} />
-                <span>Quiz</span>
               </Button>
             </div>
           </div>
