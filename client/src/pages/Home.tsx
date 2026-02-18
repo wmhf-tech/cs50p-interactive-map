@@ -59,7 +59,7 @@ export default function Home() {
             </div>
 
             {/* Controles de Zoom e Navegação */}
-            <div className="flex items-center gap-2 flex-wrap" style={{height: '87px'}} style={{width: '336px', borderStyle: 'none'}}>
+            <div className="flex items-center gap-2 flex-wrap" style={{height: '87px', width: '336px', borderStyle: 'none'}}>
               <ThemeToggle />
               <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 rounded-lg p-2 transition-colors duration-300">
                 <Button
