@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula10",
+  "moduleTitle": "Aula 10: Advanced Topics & Final Project",
+  "questions": [
+    {
+      "id": "fp001",
+      "type": "multiple_choice",
+      "questionText": "Qual é o objetivo principal do projeto final no CS50P?",
+      "options": ["Replicar um projeto existente", "Demonstrar o domínio dos conceitos aprendidos no curso", "Trabalhar em equipe em um projeto grande", "Aprender uma nova linguagem de programação"],
+      "correctAnswer": "Demonstrar o domínio dos conceitos aprendidos no curso",
+      "explanation": "O projeto final é a oportunidade de aplicar e consolidar todo o conhecimento adquirido, criando algo original e funcional.",
+      "difficulty": "easy",
+      "tags": ["final project", "cs50p"]
+    },
+    {
+      "id": "fp002",
+      "type": "multiple_choice",
+      "questionText": "Qual das seguintes opções é uma boa prática ao planejar um projeto de software?",
+      "options": ["Começar a codificar imediatamente sem um plano", "Definir requisitos claros e dividir o projeto em tarefas menores", "Evitar documentação para economizar tempo", "Trabalhar em todas as funcionalidades ao mesmo tempo"],
+      "correctAnswer": "Definir requisitos claros e dividir o projeto em tarefas menores",
+      "explanation": "Um bom planejamento, com requisitos claros e divisão de tarefas, é crucial para o sucesso de qualquer projeto de software.",
+      "difficulty": "easy",
+      "tags": ["project management", "best practices"]
+    },
+    {
+      "id": "fp003",
+      "type": "true_false",
+      "questionText": "É recomendável usar apenas bibliotecas padrão do Python em um projeto final para evitar dependências externas.",
+      "correctAnswer": "Falso",
+      "explanation": "É comum e muitas vezes benéfico usar bibliotecas de terceiros para acelerar o desenvolvimento e aproveitar funcionalidades já existentes e testadas.",
+      "difficulty": "medium",
+      "tags": ["libraries", "dependencies"]
+    },
+    {
+      "id": "fp004",
+      "type": "multiple_choice",
+      "questionText": "Qual é a importância de um bom controle de versão (ex: Git) em um projeto de software?",
+      "options": ["Apenas para backup de arquivos", "Permite rastrear mudanças, colaborar e reverter para versões anteriores", "Acelera a execução do código", "Garante a segurança do código"],
+      "correctAnswer": "Permite rastrear mudanças, colaborar e reverter para versões anteriores",
+      "explanation": "Sistemas de controle de versão como Git são essenciais para gerenciar o histórico do código, facilitar a colaboração e permitir a recuperação de versões anteriores.",
+      "difficulty": "easy",
+      "tags": ["git", "version control"]
+    },
+    {
+      "id": "fp005",
+      "type": "multiple_choice",
+      "questionText": "Ao apresentar um projeto final, qual aspecto é tão importante quanto o código em si?",
+      "options": ["A quantidade de linhas de código", "A complexidade dos algoritmos", "A clareza da apresentação e demonstração", "O uso de todas as tecnologias possíveis"],
+      "correctAnswer": "A clareza da apresentação e demonstração",
+      "explanation": "Uma boa apresentação comunica o valor, a funcionalidade e a inovação do seu projeto de forma eficaz.",
+      "difficulty": "medium",
+      "tags": ["presentation", "communication"]
+    },
+    {
+      "id": "fp006",
+      "type": "true_false",
+      "questionText": "A refatoração de código deve ser evitada em projetos finais para não introduzir novos bugs.",
+      "correctAnswer": "Falso",
+      "explanation": "Refatorar é importante para melhorar a legibilidade, manutenção e eficiência do código, mesmo em projetos finais, desde que seja feito com cuidado e testes.",
+      "difficulty": "medium",
+      "tags": ["refactoring", "code quality"]
+    },
+    {
+      "id": "fp007",
+      "type": "multiple_choice",
+      "questionText": "Qual o papel de um ambiente virtual (ex: `venv`) em projetos Python?",
+      "options": ["Acelerar a execução do Python", "Isolar as dependências do projeto do ambiente global do Python", "Criar uma cópia do Python para cada projeto", "Gerenciar a memória do sistema"],
+      "correctAnswer": "Isolar as dependências do projeto do ambiente global do Python",
+      "explanation": "Ambientes virtuais garantem que cada projeto tenha suas próprias dependências, evitando conflitos entre diferentes projetos.",
+      "difficulty": "easy",
+      "tags": ["venv", "dependencies"]
+    },
+    {
+      "id": "fp008",
+      "type": "multiple_choice",
+      "questionText": "Qual das seguintes opções é um exemplo de um bom requisito funcional para um projeto?",
+      "options": ["O sistema deve ser rápido", "O sistema deve usar Python", "O usuário deve ser capaz de fazer login com nome de usuário e senha", "O código deve ser bem comentado"],
+      "correctAnswer": "O usuário deve ser capaz de fazer login com nome de usuário e senha",
+      "explanation": "Requisitos funcionais descrevem o que o sistema *deve fazer* para o usuário, enquanto requisitos não funcionais descrevem *como* o sistema deve se comportar.",
+      "difficulty": "hard",
+      "tags": ["requirements", "functional"]
+    },
+    {
+      "id": "fp009",
+      "type": "true_false",
+      "questionText": "A documentação do código (comentários, docstrings) é útil apenas para outros desenvolvedores, não para o próprio autor.",
+      "correctAnswer": "Falso",
+      "explanation": "Uma boa documentação ajuda o próprio autor a entender o código meses depois, além de facilitar a colaboração e manutenção.",
+      "difficulty": "easy",
+      "tags": ["documentation", "code quality"]
+    },
+    {
+      "id": "fp010",
+      "type": "multiple_choice",
+      "questionText": "Qual é a principal vantagem de usar um framework web (como Flask ou Django) em um projeto final?",
+      "options": ["Torna o projeto mais lento", "Fornece uma estrutura organizada e ferramentas para desenvolvimento web rápido", "Limita a criatividade do desenvolvedor", "É obrigatório para todos os projetos web"],
+      "correctAnswer": "Fornece uma estrutura organizada e ferramentas para desenvolvimento web rápido",
+      "explanation": "Frameworks web abstraem muitas das complexidades do desenvolvimento web, fornecendo ferramentas e convenções que aceleram o processo e promovem boas práticas.",
+      "difficulty": "medium",
+      "tags": ["web development", "frameworks"]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula5",
+  "moduleTitle": "Aula 5: Object-Oriented Programming",
+  "questions": [
+    {
+      "id": "oop001",
+      "type": "multiple_choice",
+      "questionText": "Qual conceito de OOP permite que um objeto de uma classe herde características de outra classe?",
+      "options": ["Encapsulamento", "Polimorfismo", "Herança", "Abstração"],
+      "correctAnswer": "Herança",
+      "explanation": "Herança é um mecanismo que permite que uma nova classe (subclasse) herde atributos e métodos de uma classe existente (superclasse).",
+      "difficulty": "easy",
+      "tags": ["oop", "inheritance"]
+    },
+    {
+      "id": "oop002",
+      "type": "multiple_choice",
+      "questionText": "Qual método especial em Python é chamado automaticamente quando um objeto de uma classe é criado?",
+      "options": ["__start__", "__init__", "__new__", "__create__"],
+      "correctAnswer": "__init__",
+      "explanation": "O método `__init__` é o construtor de uma classe em Python, usado para inicializar os atributos do objeto.",
+      "difficulty": "easy",
+      "tags": ["oop", "constructor"]
+    },
+    {
+      "id": "oop003",
+      "type": "true_false",
+      "questionText": "Em Python, todos os métodos de uma classe devem ter `self` como seu primeiro parâmetro.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "`self` é uma convenção para se referir à instância do objeto dentro dos métodos da classe.",
+      "difficulty": "easy",
+      "tags": ["oop", "self"]
+    },
+    {
+      "id": "oop004",
+      "type": "multiple_choice",
+      "questionText": "Qual princípio de OOP se refere ao agrupamento de dados (atributos) e métodos (funções) que operam sobre esses dados em uma única unidade (classe)?",
+      "options": ["Herança", "Polimorfismo", "Encapsulamento", "Abstração"],
+      "correctAnswer": "Encapsulamento",
+      "explanation": "Encapsulamento é o conceito de agrupar dados e os métodos que operam sobre esses dados dentro de uma única unidade, protegendo os dados de acesso externo direto.",
+      "difficulty": "medium",
+      "tags": ["oop", "encapsulation"]
+    },
+    {
+      "id": "oop005",
+      "type": "multiple_choice",
+      "questionText": "Qual das seguintes opções descreve melhor o polimorfismo em Python?",
+      "options": ["Um objeto pode ter múltiplos tipos de dados", "Métodos com o mesmo nome podem ter comportamentos diferentes em classes diferentes", "Uma classe pode herdar de múltiplas classes", "Atributos de uma classe são privados por padrão"],
+      "correctAnswer": "Métodos com o mesmo nome podem ter comportamentos diferentes em classes diferentes",
+      "explanation": "Polimorfismo permite que objetos de diferentes classes sejam tratados de forma uniforme através de uma interface comum, onde um mesmo método pode ter implementações distintas em cada classe.",
+      "difficulty": "medium",
+      "tags": ["oop", "polymorphism"]
+    },
+    {
+      "id": "oop006",
+      "type": "true_false",
+      "questionText": "Em Python, não existe o conceito de modificadores de acesso (público, privado, protegido) como em Java ou C++.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Python não tem modificadores de acesso estritos. A convenção é usar um único underscore (`_`) para indicar que um atributo/método é protegido e dois underscores (`__`) para indicar que é privado (name mangling).",
+      "difficulty": "medium",
+      "tags": ["oop", "access modifiers"]
+    },
+    {
+      "id": "oop007",
+      "type": "multiple_choice",
+      "questionText": "Qual é a finalidade do decorador `@classmethod` em Python?",
+      "options": ["Define um método que pode ser chamado sem uma instância da classe", "Define um método que opera na instância da classe", "Define um método que opera na classe em si, não na instância", "Define um método estático"],
+      "correctAnswer": "Define um método que opera na classe em si, não na instância",
+      "explanation": "`@classmethod` é usado para criar métodos que recebem a classe como primeiro argumento (`cls`), em vez da instância (`self`).",
+      "difficulty": "hard",
+      "tags": ["oop", "classmethod", "decorator"]
+    },
+    {
+      "id": "oop008",
+      "type": "multiple_choice",
+      "questionText": "Qual das seguintes opções é um exemplo de composição em OOP?",
+      "options": ["Uma `Carro` herda de `Veiculo`", "Uma `Pessoa` tem um `Endereco`", "Uma `Animal` pode ser `Cachorro` ou `Gato`", "Um método `falar()` em diferentes classes"],
+      "correctAnswer": "Uma `Pessoa` tem um `Endereco`",
+      "explanation": "Composição é um relacionamento 'tem um' (has-a), onde uma classe contém uma instância de outra classe como um de seus atributos.",
+      "difficulty": "hard",
+      "tags": ["oop", "composition"]
+    },
+    {
+      "id": "oop009",
+      "type": "true_false",
+      "questionText": "Classes abstratas em Python podem ser instanciadas diretamente.",
+      "correctAnswer": "Falso",
+      "explanation": "Classes abstratas (definidas usando o módulo `abc`) não podem ser instanciadas diretamente; elas servem como *blueprints* para outras classes.",
+      "difficulty": "medium",
+      "tags": ["oop", "abstract class"]
+    },
+    {
+      "id": "oop010",
+      "type": "multiple_choice",
+      "questionText": "Qual é a principal diferença entre um método de instância e um método estático em Python?",
+      "options": ["Métodos de instância podem acessar atributos da classe, estáticos não", "Métodos estáticos podem ser chamados sem uma instância da classe e não acessam `self` nem `cls`", "Métodos de instância são mais rápidos", "Métodos estáticos são sempre privados"],
+      "correctAnswer": "Métodos estáticos podem ser chamados sem uma instância da classe e não acessam `self` nem `cls`",
+      "explanation": "Métodos estáticos (decorados com `@staticmethod`) não recebem `self` (instância) nem `cls` (classe) como primeiro argumento e são úteis para funções utilitárias que pertencem à classe, mas não dependem do estado da instância.",
+      "difficulty": "hard",
+      "tags": ["oop", "staticmethod"]
+    }
+  ]
+}

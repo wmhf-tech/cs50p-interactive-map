@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula9",
+  "moduleTitle": "Aula 9: Scalability and Security",
+  "questions": [
+    {
+      "id": "ss001",
+      "type": "multiple_choice",
+      "questionText": "Qual termo se refere à capacidade de um sistema de lidar com uma quantidade crescente de trabalho ou demanda?",
+      "options": ["Robustez", "Eficiência", "Escalabilidade", "Disponibilidade"],
+      "correctAnswer": "Escalabilidade",
+      "explanation": "Escalabilidade é a propriedade de um sistema de ser capaz de lidar com uma carga de trabalho crescente, seja adicionando mais recursos (escalabilidade vertical) ou mais máquinas (escalabilidade horizontal).",
+      "difficulty": "easy",
+      "tags": ["scalability"]
+    },
+    {
+      "id": "ss002",
+      "type": "multiple_choice",
+      "questionText": "Qual técnica de segurança ajuda a prevenir ataques de injeção SQL?",
+      "options": ["Validação de entrada", "Criptografia de dados", "Consultas parametrizadas", "Autenticação de dois fatores"],
+      "correctAnswer": "Consultas parametrizadas",
+      "explanation": "Consultas parametrizadas (ou *prepared statements*) separam o código SQL dos dados de entrada, prevenindo que dados maliciosos sejam interpretados como comandos SQL.",
+      "difficulty": "easy",
+      "tags": ["security", "sql injection"]
+    },
+    {
+      "id": "ss003",
+      "type": "true_false",
+      "questionText": "Escalabilidade vertical envolve adicionar mais servidores para distribuir a carga de trabalho.",
+      "correctAnswer": "Falso",
+      "explanation": "Escalabilidade vertical envolve aumentar os recursos de um único servidor (CPU, RAM, disco). Escalabilidade horizontal envolve adicionar mais servidores.",
+      "difficulty": "medium",
+      "tags": ["scalability", "vertical"]
+    },
+    {
+      "id": "ss004",
+      "type": "multiple_choice",
+      "questionText": "Qual é o propósito principal de um *load balancer* em um sistema escalável?",
+      "options": ["Armazenar dados em cache", "Distribuir o tráfego de rede entre múltiplos servidores", "Monitorar a segurança da rede", "Criptografar comunicações"],
+      "correctAnswer": "Distribuir o tráfego de rede entre múltiplos servidores",
+      "explanation": "Um *load balancer* distribui as requisições de entrada entre vários servidores, otimizando o uso de recursos e aumentando a disponibilidade.",
+      "difficulty": "medium",
+      "tags": ["scalability", "load balancer"]
+    },
+    {
+      "id": "ss005",
+      "type": "multiple_choice",
+      "questionText": "Qual vulnerabilidade de segurança ocorre quando um atacante injeta scripts maliciosos em páginas web visualizadas por outros usuários?",
+      "options": ["CSRF", "SQL Injection", "DDoS", "XSS"],
+      "correctAnswer": "XSS",
+      "explanation": "Cross-Site Scripting (XSS) permite que atacantes injetem scripts maliciosos (geralmente JavaScript) em conteúdo web confiável.",
+      "difficulty": "medium",
+      "tags": ["security", "xss"]
+    },
+    {
+      "id": "ss006",
+      "type": "true_false",
+      "questionText": "Criptografar senhas diretamente no banco de dados é uma prática de segurança recomendada.",
+      "correctAnswer": "Falso",
+      "explanation": "Senhas nunca devem ser armazenadas diretamente (mesmo criptografadas). Elas devem ser *hashed* (com *salt*) para protegê-las contra ataques de dicionário e tabelas arco-íris.",
+      "difficulty": "hard",
+      "tags": ["security", "passwords", "hashing"]
+    },
+    {
+      "id": "ss007",
+      "type": "multiple_choice",
+      "questionText": "Qual das seguintes opções é uma estratégia para alcançar escalabilidade horizontal?",
+      "options": ["Aumentar a RAM do servidor", "Otimizar algoritmos de código", "Adicionar mais instâncias de servidor", "Usar um banco de dados mais rápido"],
+      "correctAnswer": "Adicionar mais instâncias de servidor",
+      "explanation": "Escalabilidade horizontal envolve a adição de mais máquinas (servidores) a um pool de recursos, distribuindo a carga de trabalho entre elas.",
+      "difficulty": "easy",
+      "tags": ["scalability", "horizontal"]
+    },
+    {
+      "id": "ss008",
+      "type": "multiple_choice",
+      "questionText": "O que é um ataque de Força Bruta (Brute-Force Attack)?",
+      "options": ["Um ataque que explora vulnerabilidades de software", "Um ataque que tenta todas as combinações possíveis de senhas/chaves", "Um ataque que sobrecarrega o servidor com requisições", "Um ataque que rouba informações de sessão"],
+      "correctAnswer": "Um ataque que tenta todas as combinações possíveis de senhas/chaves",
+      "explanation": "Um ataque de força bruta tenta adivinhar credenciais (como senhas) testando sistematicamente todas as combinações possíveis.",
+      "difficulty": "hard",
+      "tags": ["security", "brute force"]
+    },
+    {
+      "id": "ss009",
+      "type": "true_false",
+      "questionText": "A validação de entrada de dados do usuário é uma medida de segurança importante.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Validar e sanitizar todas as entradas do usuário é crucial para prevenir uma ampla gama de vulnerabilidades, como injeção e XSS.",
+      "difficulty": "easy",
+      "tags": ["security", "input validation"]
+    },
+    {
+      "id": "ss010",
+      "type": "multiple_choice",
+      "questionText": "Qual o conceito de *caching* em sistemas escaláveis?",
+      "options": ["Armazenar dados permanentemente no banco de dados", "Armazenar cópias de dados frequentemente acessados em um local de acesso mais rápido", "Criptografar dados antes de enviá-los", "Distribuir dados entre múltiplos servidores"],
+      "correctAnswer": "Armazenar cópias de dados frequentemente acessados em um local de acesso mais rápido",
+      "explanation": "Caching armazena dados em memória ou em um armazenamento rápido para reduzir a latência e a carga sobre o banco de dados ou serviços de backend, melhorando o desempenho e a escalabilidade.",
+      "difficulty": "hard",
+      "tags": ["scalability", "caching"]
+    }
+  ]
+}

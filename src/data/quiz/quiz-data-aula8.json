@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula8",
+  "moduleTitle": "Aula 8: Flask",
+  "questions": [
+    {
+      "id": "fl001",
+      "type": "multiple_choice",
+      "questionText": "Qual é o microframework web Python mais popular para construir aplicações web?",
+      "options": ["Django", "Pyramid", "Flask", "FastAPI"],
+      "correctAnswer": "Flask",
+      "explanation": "Flask é um microframework web leve e popular para Python, conhecido por sua simplicidade e flexibilidade.",
+      "difficulty": "easy",
+      "tags": ["flask", "web framework"]
+    },
+    {
+      "id": "fl002",
+      "type": "multiple_choice",
+      "questionText": "Qual decorador é usado no Flask para associar uma URL a uma função Python?",
+      "options": ["@app.route()", "@app.url()", "@app.path()", "@app.get()"],
+      "correctAnswer": "@app.route()",
+      "explanation": "O decorador `@app.route()` é usado para definir rotas em aplicações Flask, mapeando URLs para funções de visualização.",
+      "difficulty": "easy",
+      "tags": ["flask", "routing", "decorator"]
+    },
+    {
+      "id": "fl003",
+      "type": "true_false",
+      "questionText": "Flask é um framework full-stack que inclui um ORM e um sistema de templates por padrão.",
+      "correctAnswer": "Falso",
+      "explanation": "Flask é um microframework, o que significa que ele fornece apenas o essencial. ORM e sistemas de templates (como Jinja) são adicionados separadamente.",
+      "difficulty": "medium",
+      "tags": ["flask", "microframework"]
+    },
+    {
+      "id": "fl004",
+      "type": "multiple_choice",
+      "questionText": "Qual função do Flask é usada para renderizar arquivos de template HTML?",
+      "options": ["display_template()", "show_html()", "render_template()", "make_response()"],
+      "correctAnswer": "render_template()",
+      "explanation": "A função `render_template()` é usada para renderizar templates Jinja2, passando variáveis para eles.",
+      "difficulty": "easy",
+      "tags": ["flask", "templates"]
+    },
+    {
+      "id": "fl005",
+      "type": "multiple_choice",
+      "questionText": "Como você acessa os dados de um formulário enviado via POST em Flask?",
+      "options": ["request.args", "request.form", "request.data", "request.json"],
+      "correctAnswer": "request.form",
+      "explanation": "O objeto `request.form` contém os dados de formulário enviados via POST.",
+      "difficulty": "medium",
+      "tags": ["flask", "forms", "request"]
+    },
+    {
+      "id": "fl006",
+      "type": "true_false",
+      "questionText": "O Flask usa o Jinja2 como seu motor de template padrão.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Jinja2 é o motor de template padrão e recomendado para aplicações Flask.",
+      "difficulty": "easy",
+      "tags": ["flask", "jinja2"]
+    },
+    {
+      "id": "fl007",
+      "type": "multiple_choice",
+      "questionText": "Qual função é usada para redirecionar o usuário para outra URL em Flask?",
+      "options": ["redirect()", "forward()", "go_to()", "navigate()"],
+      "correctAnswer": "redirect()",
+      "explanation": "A função `redirect()` é usada para emitir um redirecionamento HTTP para o cliente.",
+      "difficulty": "medium",
+      "tags": ["flask", "redirect"]
+    },
+    {
+      "id": "fl008",
+      "type": "multiple_choice",
+      "questionText": "Para que serve a função `url_for()` no Flask?",
+      "options": ["Para obter a URL atual", "Para construir uma URL para uma função de visualização", "Para validar URLs", "Para abrir uma URL externa"],
+      "correctAnswer": "Para construir uma URL para uma função de visualização",
+      "explanation": "`url_for()` é usada para construir URLs dinamicamente, evitando URLs codificadas e facilitando a manutenção.",
+      "difficulty": "hard",
+      "tags": ["flask", "url_for"]
+    },
+    {
+      "id": "fl009",
+      "type": "true_false",
+      "questionText": "Sessões em Flask são armazenadas no lado do servidor por padrão.",
+      "correctAnswer": "Falso",
+      "explanation": "As sessões em Flask são baseadas em cookies e armazenadas no lado do cliente, assinadas criptograficamente para evitar adulteração.",
+      "difficulty": "hard",
+      "tags": ["flask", "sessions"]
+    },
+    {
+      "id": "fl010",
+      "type": "multiple_choice",
+      "questionText": "Qual é a finalidade de `app.run(debug=True)`?",
+      "options": ["Inicia o servidor em modo de produção", "Desativa o recarregamento automático", "Ativa o modo de depuração, com recarregamento automático e depurador interativo", "Apenas imprime mensagens de depuração no console"],
+      "correctAnswer": "Ativa o modo de depuração, com recarregamento automático e depurador interativo",
+      "explanation": "`debug=True` ativa o modo de depuração, que inclui um depurador interativo e recarregamento automático do servidor ao detectar mudanças no código.",
+      "difficulty": "medium",
+      "tags": ["flask", "debug"]
+    }
+  ]
+}

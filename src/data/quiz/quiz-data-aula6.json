@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula6",
+  "moduleTitle": "Aula 6: Testing and Debugging",
+  "questions": [
+    {
+      "id": "td001",
+      "type": "multiple_choice",
+      "questionText": "Qual módulo Python é comumente usado para escrever testes unitários?",
+      "options": ["pytest", "unittest", "testlib", "debugpy"],
+      "correctAnswer": "unittest",
+      "explanation": "O módulo `unittest` é a estrutura de teste de unidade padrão do Python.",
+      "difficulty": "easy",
+      "tags": ["testing", "unittest"]
+    },
+    {
+      "id": "td002",
+      "type": "multiple_choice",
+      "questionText": "Qual é o principal objetivo dos testes unitários?",
+      "options": ["Testar a interface do usuário", "Testar a integração entre componentes", "Testar pequenas partes isoladas do código", "Testar o desempenho do sistema"],
+      "correctAnswer": "Testar pequenas partes isoladas do código",
+      "explanation": "Testes unitários focam em verificar a funcionalidade de unidades individuais de código, como funções ou métodos, de forma isolada.",
+      "difficulty": "easy",
+      "tags": ["testing", "unit test"]
+    },
+    {
+      "id": "td003",
+      "type": "true_false",
+      "questionText": "A depuração (debugging) é o processo de encontrar e corrigir erros em um programa.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Depuração é a atividade de identificar, analisar e remover bugs ou defeitos de um programa de computador.",
+      "difficulty": "easy",
+      "tags": ["debugging"]
+    },
+    {
+      "id": "td004",
+      "type": "multiple_choice",
+      "questionText": "Qual afirmação é usada em testes unitários para verificar se dois valores são iguais?",
+      "options": ["assert_equal()", "assertEqual()", "is_equal()", "checkEqual()"],
+      "correctAnswer": "assertEqual()",
+      "explanation": "Em `unittest`, `assertEqual()` é usado para verificar se o primeiro e o segundo argumentos são iguais.",
+      "difficulty": "medium",
+      "tags": ["testing", "assertion"]
+    },
+    {
+      "id": "td005",
+      "type": "multiple_choice",
+      "questionText": "Qual ferramenta Python permite executar o código passo a passo e inspecionar variáveis?",
+      "options": ["linter", "profiler", "debugger", "compiler"],
+      "correctAnswer": "debugger",
+      "explanation": "Um debugger permite controlar a execução do programa, definir pontos de interrupção e examinar o estado das variáveis.",
+      "difficulty": "medium",
+      "tags": ["debugging", "tool"]
+    },
+    {
+      "id": "td006",
+      "type": "true_false",
+      "questionText": "Testes de integração verificam a interação entre diferentes módulos ou componentes do sistema.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Testes de integração focam em expor defeitos na interação entre as unidades integradas.",
+      "difficulty": "medium",
+      "tags": ["testing", "integration test"]
+    },
+    {
+      "id": "td007",
+      "type": "multiple_choice",
+      "questionText": "Qual é a finalidade de um *breakpoint* em um debugger?",
+      "options": ["Marcar uma linha de código para ser ignorada", "Parar a execução do programa em um ponto específico", "Indicar um erro no código", "Acelerar a execução do programa"],
+      "correctAnswer": "Parar a execução do programa em um ponto específico",
+      "explanation": "Um breakpoint é um ponto intencional ou uma condição em um programa, onde o programador deseja pausar a execução para inspecionar o estado do programa.",
+      "difficulty": "easy",
+      "tags": ["debugging", "breakpoint"]
+    },
+    {
+      "id": "td008",
+      "type": "multiple_choice",
+      "questionText": "Qual dos seguintes é um benefício de ter uma boa cobertura de testes?",
+      "options": ["Aumenta o tempo de desenvolvimento", "Garante que o código não terá bugs", "Reduz a chance de introduzir novos bugs ao fazer alterações", "Torna o código mais complexo"],
+      "correctAnswer": "Reduz a chance de introduzir novos bugs ao fazer alterações",
+      "explanation": "Uma boa cobertura de testes dá confiança para refatorar e adicionar novas funcionalidades, pois os testes existentes alertarão sobre regressões.",
+      "difficulty": "hard",
+      "tags": ["testing", "benefits"]
+    },
+    {
+      "id": "td009",
+      "type": "true_false",
+      "questionText": "O `print()` statement é uma ferramenta de depuração eficaz para todos os cenários.",
+      "correctAnswer": "Falso",
+      "explanation": "Embora `print()` seja útil para depuração simples, um debugger oferece muito mais controle e visibilidade sobre o estado do programa, sendo mais eficaz para problemas complexos.",
+      "difficulty": "medium",
+      "tags": ["debugging", "print statement"]
+    },
+    {
+      "id": "td010",
+      "type": "multiple_choice",
+      "questionText": "Qual o nome do processo de testar o software como um todo, do ponto de vista do usuário final?",
+      "options": ["Teste unitário", "Teste de integração", "Teste de aceitação", "Teste de desempenho"],
+      "correctAnswer": "Teste de aceitação",
+      "explanation": "Testes de aceitação verificam se o sistema atende aos requisitos do usuário e do negócio.",
+      "difficulty": "hard",
+      "tags": ["testing", "acceptance test"]
+    }
+  ]
+}

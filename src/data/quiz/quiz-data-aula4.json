@@ -1,0 +1,102 @@
+{
+  "moduleId": "cs50p-aula4",
+  "moduleTitle": "Aula 4: Regular Expressions",
+  "questions": [
+    {
+      "id": "re001",
+      "type": "multiple_choice",
+      "questionText": "Qual módulo Python é usado para trabalhar com expressões regulares?",
+      "options": ["regex", "re", "regexp", "pattern"],
+      "correctAnswer": "re",
+      "explanation": "O módulo `re` fornece operações de expressão regular em Python.",
+      "difficulty": "easy",
+      "tags": ["regex", "module"]
+    },
+    {
+      "id": "re002",
+      "type": "multiple_choice",
+      "questionText": "Qual caractere especial em regex corresponde a qualquer caractere único (exceto nova linha)?",
+      "options": ["*", "+", ".", "?"],
+      "correctAnswer": ".",
+      "explanation": "O ponto (`.`) corresponde a qualquer caractere (exceto nova linha) em uma expressão regular.",
+      "difficulty": "easy",
+      "tags": ["regex", "wildcard"]
+    },
+    {
+      "id": "re003",
+      "type": "true_false",
+      "questionText": "O quantificador `*` corresponde a zero ou mais ocorrências do caractere ou grupo anterior.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "O asterisco (`*`) é um quantificador que significa 'zero ou mais' do elemento precedente.",
+      "difficulty": "easy",
+      "tags": ["regex", "quantifier"]
+    },
+    {
+      "id": "re004",
+      "type": "multiple_choice",
+      "questionText": "Qual função do módulo `re` é usada para encontrar todas as ocorrências de um padrão em uma string?",
+      "options": ["re.search()", "re.match()", "re.findall()", "re.find()"],
+      "correctAnswer": "re.findall()",
+      "explanation": "`re.findall()` retorna uma lista de todas as correspondências não sobrepostas do padrão na string.",
+      "difficulty": "medium",
+      "tags": ["regex", "function"]
+    }, {
+      "id": "re005",
+      "type": "multiple_choice",
+      "questionText": "Para que serve o metacaractere `^` no início de uma expressão regular?",
+      "options": ["Corresponde ao final da string", "Corresponde ao início da string", "Nega um conjunto de caracteres", "Corresponde a qualquer dígito"],
+      "correctAnswer": "Corresponde ao início da string",
+      "explanation": "O acento circunflexo (`^`) corresponde ao início da string (ou ao início de uma linha em modo multilinha).",
+      "difficulty": "medium",
+      "tags": ["regex", "anchor"]
+    },
+    {
+      "id": "re006",
+      "type": "true_false",
+      "questionText": "O `re.match()` verifica se o padrão corresponde em qualquer lugar da string.",
+      "correctAnswer": "Falso",
+      "explanation": "`re.match()` verifica apenas se o padrão corresponde no *início* da string. Para correspondência em qualquer lugar, use `re.search()`.",
+      "difficulty": "medium",
+      "tags": ["regex", "match", "search"]
+    },
+    {
+      "id": "re007",
+      "type": "multiple_choice",
+      "questionText": "Qual sequência de escape corresponde a um dígito (0-9)?",
+      "options": ["\\d", "\\w", "\\s", "\\a"],
+      "correctAnswer": "\\d",
+      "explanation": "`\\d` corresponde a qualquer caractere de dígito decimal.",
+      "difficulty": "easy",
+      "tags": ["regex", "character class"]
+    },
+    {
+      "id": "re008",
+      "type": "multiple_choice",
+      "questionText": "Qual quantificador corresponde a uma ou mais ocorrências do caractere ou grupo anterior?",
+      "options": ["*", "+", "?", "{0,}"],
+      "correctAnswer": "+",
+      "explanation": "O sinal de mais (`+`) é um quantificador que significa 'uma ou mais' do elemento precedente.",
+      "difficulty": "hard",
+      "tags": ["regex", "quantifier"]
+    },
+    {
+      "id": "re009",
+      "type": "true_false",
+      "questionText": "É possível usar expressões regulares para substituir partes de uma string.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "A função `re.sub()` pode ser usada para substituir todas as ocorrências de um padrão por uma string de substituição.",
+      "difficulty": "easy",
+      "tags": ["regex", "substitute"]
+    },
+    {
+      "id": "re010",
+      "type": "multiple_choice",
+      "questionText": "Qual é a finalidade de usar `r` antes de uma string de expressão regular em Python (ex: `r'\\d+'`)?",
+      "options": ["Torna a regex mais rápida", "Indica que é uma string bruta (raw string)", "Converte a regex para binário", "Define a regex como global"],
+      "correctAnswer": "Indica que é uma string bruta (raw string)",
+      "explanation": "O prefixo `r` em uma string literal em Python indica que é uma 'raw string', o que é útil para expressões regulares, pois evita que as barras invertidas sejam interpretadas como sequências de escape Python.",
+      "difficulty": "hard",
+      "tags": ["regex", "raw string"]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula2",
+  "moduleTitle": "Aula 2: Conditionals and Loops",
+  "questions": [
+    {
+      "id": "cl001",
+      "type": "multiple_choice",
+      "questionText": "Qual palavra-chave é usada para iniciar uma estrutura condicional em Python?",
+      "options": ["if", "for", "while", "elif"],
+      "correctAnswer": "if",
+      "explanation": "A palavra-chave `if` é usada para iniciar uma declaração condicional, executando um bloco de código se a condição for verdadeira.",
+      "difficulty": "easy",
+      "tags": ["conditional", "if"]
+    },
+    {
+      "id": "cl002",
+      "type": "multiple_choice",
+      "questionText": "Qual das seguintes opções é usada para verificar múltiplas condições em sequência após um `if` inicial?",
+      "options": ["else if", "then if", "elif", "or if"],
+      "correctAnswer": "elif",
+      "explanation": "`elif` (else if) é usado em Python para verificar condições adicionais após um `if` inicial.",
+      "difficulty": "easy",
+      "tags": ["conditional", "elif"]
+    },
+    {
+      "id": "cl003",
+      "type": "true_false",
+      "questionText": "O bloco de código dentro de um `for` loop é executado apenas uma vez.",
+      "correctAnswer": "Falso",
+      "explanation": "Um `for` loop é usado para iterar sobre uma sequência (como uma lista, tupla, dicionário, conjunto ou string) ou outros objetos iteráveis, executando o bloco de código para cada item na sequência.",
+      "difficulty": "easy",
+      "tags": ["loop", "for"]
+    },
+    {
+      "id": "cl004",
+      "type": "multiple_choice",
+      "questionText": "Qual é a função do operador `and` em uma condição Python?",
+      "options": ["Verifica se pelo menos uma condição é verdadeira", "Verifica se ambas as condições são verdadeiras", "Nega uma condição", "Compara dois valores"],
+      "correctAnswer": "Verifica se ambas as condições são verdadeiras",
+      "explanation": "O operador lógico `and` retorna `True` se ambas as expressões booleanas à sua esquerda e direita forem verdadeiras.",
+      "difficulty": "medium",
+      "tags": ["conditional", "operator", "logical"]
+    },
+    {
+      "id": "cl005",
+      "type": "multiple_choice",
+      "questionText": "Qual loop é mais adequado para iterar sobre uma sequência de itens quando o número de iterações é conhecido?",
+      "options": ["while loop", "do-while loop", "for loop", "repeat loop"],
+      "correctAnswer": "for loop",
+      "explanation": "O `for` loop é ideal para iterar sobre coleções ou quando o número de iterações é predefinido.",
+      "difficulty": "medium",
+      "tags": ["loop", "for"]
+    },
+    {
+      "id": "cl006",
+      "type": "true_false",
+      "questionText": "A palavra-chave `break` pode ser usada para sair de um loop prematuramente.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "A declaração `break` termina o loop atual e transfere o controle para a declaração imediatamente após o loop.",
+      "difficulty": "medium",
+      "tags": ["loop", "break"]
+    },
+    {
+      "id": "cl007",
+      "type": "multiple_choice",
+      "questionText": "Qual o resultado do seguinte código?\n```python\ni = 0\nwhile i < 3:\n    print(i)\n    i += 1\n```",
+      "options": ["0\n1\n2\n3", "0\n1\n2", "1\n2\n3", "Erro"],
+      "correctAnswer": "0\n1\n2",
+      "explanation": "O loop `while` continua enquanto `i` for menor que 3. Ele imprime `i` e depois incrementa `i`.",
+      "difficulty": "easy",
+      "tags": ["loop", "while"]
+    },
+    {
+      "id": "cl008",
+      "type": "multiple_choice",
+      "questionText": "O que a palavra-chave `continue` faz em um loop?",
+      "options": ["Termina o loop", "Pula para a próxima iteração do loop", "Reinicia o loop", "Ignora a condição do loop"],
+      "correctAnswer": "Pula para a próxima iteração do loop",
+      "explanation": "A declaração `continue` faz com que o loop pule o restante do código no corpo do loop para a iteração atual e passe para a próxima iteração.",
+      "difficulty": "hard",
+      "tags": ["loop", "continue"]
+    },
+    {
+      "id": "cl009",
+      "type": "true_false",
+      "questionText": "É possível ter um `if` dentro de outro `if` (condicionais aninhadas).",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Condicionais podem ser aninhadas, permitindo verificar condições mais complexas.",
+      "difficulty": "easy",
+      "tags": ["conditional", "nested"]
+    },
+    {
+      "id": "cl010",
+      "type": "multiple_choice",
+      "questionText": "Qual operador é usado para verificar se dois valores são diferentes em Python?",
+      "options": ["==", "!=", "=", "< >"],
+      "correctAnswer": "!=",
+      "explanation": "O operador `!=` é usado para verificar a desigualdade entre dois valores.",
+      "difficulty": "medium",
+      "tags": ["conditional", "operator"]
+    }
+  ]
+}

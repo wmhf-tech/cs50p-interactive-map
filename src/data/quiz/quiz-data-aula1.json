@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula1",
+  "moduleTitle": "Aula 1: Data Structures",
+  "questions": [
+    {
+      "id": "ds001",
+      "type": "multiple_choice",
+      "questionText": "Qual estrutura de dados Python é uma coleção ordenada e mutável de itens?",
+      "options": ["Tupla", "Conjunto", "Dicionário", "Lista"],
+      "correctAnswer": "Lista",
+      "explanation": "Listas em Python são sequências ordenadas, mutáveis e podem conter itens de diferentes tipos.",
+      "difficulty": "easy",
+      "tags": ["list", "mutable", "ordered"]
+    },
+    {
+      "id": "ds002",
+      "type": "multiple_choice",
+      "questionText": "Qual estrutura de dados Python armazena pares chave-valor?",
+      "options": ["Lista", "Tupla", "Conjunto", "Dicionário"],
+      "correctAnswer": "Dicionário",
+      "explanation": "Dicionários são coleções não ordenadas de pares chave-valor, onde cada chave deve ser única.",
+      "difficulty": "easy",
+      "tags": ["dictionary", "key-value"]
+    },
+    {
+      "id": "ds003",
+      "type": "true_false",
+      "questionText": "Tuplas em Python são imutáveis.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Uma vez criada, os elementos de uma tupla não podem ser alterados, adicionados ou removidos.",
+      "difficulty": "easy",
+      "tags": ["tuple", "immutable"]
+    },
+    {
+      "id": "ds004",
+      "type": "multiple_choice",
+      "questionText": "Qual método é usado para adicionar um elemento ao final de uma lista em Python?",
+      "options": ["insert()", "add()", "append()", "extend()"],
+      "correctAnswer": "append()",
+      "explanation": "O método `append()` adiciona um único elemento ao final da lista.",
+      "difficulty": "medium",
+      "tags": ["list", "method"]
+    },
+    {
+      "id": "ds005",
+      "type": "multiple_choice",
+      "questionText": "Qual a principal característica de um Conjunto (Set) em Python?",
+      "options": ["Permite elementos duplicados", "É ordenado por padrão", "Armazena apenas elementos únicos", "Usa índices numéricos"],
+      "correctAnswer": "Armazena apenas elementos únicos",
+      "explanation": "Conjuntos são coleções não ordenadas de elementos únicos. Eles são frequentemente usados para remover duplicatas de uma lista.",
+      "difficulty": "medium",
+      "tags": ["set", "unique"]
+    },
+    {
+      "id": "ds006",
+      "type": "true_false",
+      "questionText": "A ordem dos elementos em um dicionário Python é garantida a partir do Python 3.7.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "A partir do Python 3.7, a ordem de inserção dos itens em um dicionário é mantida e garantida.",
+      "difficulty": "medium",
+      "tags": ["dictionary", "ordered"]
+    },
+    {
+      "id": "ds007",
+      "type": "multiple_choice",
+      "questionText": "Qual o resultado de `len((1, 2, 3, 4))`?",
+      "options": ["3", "4", "Erro", "5"],
+      "correctAnswer": "4",
+      "explanation": "A função `len()` retorna o número de itens em uma tupla, lista, string ou dicionário.",
+      "difficulty": "easy",
+      "tags": ["tuple", "len"]
+    },
+    {
+      "id": "ds008",
+      "type": "multiple_choice",
+      "questionText": "Para que serve o método `pop()` em uma lista?",
+      "options": ["Adicionar um elemento", "Remover o último elemento e retorná-lo", "Inverter a lista", "Ordenar a lista"],
+      "correctAnswer": "Remover o último elemento e retorná-lo",
+      "explanation": "O método `pop()` remove e retorna o item no índice especificado (ou o último item, se nenhum índice for fornecido).",
+      "difficulty": "hard",
+      "tags": ["list", "method"]
+    },
+    {
+      "id": "ds009",
+      "type": "true_false",
+      "questionText": "Listas e tuplas podem conter outras listas e tuplas aninhadas.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Estruturas de dados em Python podem ser aninhadas, permitindo a criação de estruturas complexas.",
+      "difficulty": "easy",
+      "tags": ["nested", "list", "tuple"]
+    },
+    {
+      "id": "ds010",
+      "type": "multiple_choice",
+      "questionText": "Qual a complexidade de tempo média para buscar um elemento em um dicionário Python?",
+      "options": ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+      "correctAnswer": "O(1)",
+      "explanation": "Dicionários em Python são implementados como tabelas hash, o que permite buscas, inserções e exclusões em tempo médio constante (O(1)).",
+      "difficulty": "hard",
+      "tags": ["dictionary", "complexity", "hash table"]
+    }
+  ]
+}

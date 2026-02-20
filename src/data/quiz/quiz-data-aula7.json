@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula7",
+  "moduleTitle": "Aula 7: SQL",
+  "questions": [
+    {
+      "id": "sql001",
+      "type": "multiple_choice",
+      "questionText": "Qual comando SQL é usado para extrair dados de um banco de dados?",
+      "options": ["GET", "EXTRACT", "SELECT", "OBTAIN"],
+      "correctAnswer": "SELECT",
+      "explanation": "O comando `SELECT` é fundamental para recuperar dados de uma ou mais tabelas em um banco de dados.",
+      "difficulty": "easy",
+      "tags": ["sql", "select"]
+    },
+    {
+      "id": "sql002",
+      "type": "multiple_choice",
+      "questionText": "Qual cláusula SQL é usada para filtrar registros com base em uma condição?",
+      "options": ["FILTER", "HAVING", "WHERE", "CONDITION"],
+      "correctAnswer": "WHERE",
+      "explanation": "A cláusula `WHERE` é usada para especificar uma condição ao buscar dados de uma tabela.",
+      "difficulty": "easy",
+      "tags": ["sql", "where"]
+    },
+    {
+      "id": "sql003",
+      "type": "true_false",
+      "questionText": "O comando `INSERT INTO` é usado para atualizar registros existentes em uma tabela.",
+      "correctAnswer": "Falso",
+      "explanation": "O comando `INSERT INTO` é usado para adicionar novos registros a uma tabela. Para atualizar, usa-se `UPDATE`.",
+      "difficulty": "easy",
+      "tags": ["sql", "insert", "update"]
+    },
+    {
+      "id": "sql004",
+      "type": "multiple_choice",
+      "questionText": "Qual comando SQL é usado para remover registros de uma tabela?",
+      "options": ["REMOVE", "ERASE", "DELETE", "DROP"],
+      "correctAnswer": "DELETE",
+      "explanation": "O comando `DELETE` é usado para remover uma ou mais linhas de uma tabela que satisfazem uma condição.",
+      "difficulty": "medium",
+      "tags": ["sql", "delete"]
+    },
+    {
+      "id": "sql005",
+      "type": "multiple_choice",
+      "questionText": "Qual cláusula SQL é usada para ordenar o conjunto de resultados de uma consulta?",
+      "options": ["SORT BY", "ARRANGE BY", "ORDER BY", "GROUP BY"],
+      "correctAnswer": "ORDER BY",
+      "explanation": "A cláusula `ORDER BY` é usada para classificar o conjunto de resultados em ordem crescente ou decrescente.",
+      "difficulty": "medium",
+      "tags": ["sql", "order by"]
+    },
+    {
+      "id": "sql006",
+      "type": "true_false",
+      "questionText": "`PRIMARY KEY` é uma restrição que garante que todos os valores em uma coluna sejam únicos e não nulos.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Uma chave primária identifica unicamente cada registro em uma tabela e não pode conter valores nulos.",
+      "difficulty": "medium",
+      "tags": ["sql", "primary key"]
+    },
+    {
+      "id": "sql007",
+      "type": "multiple_choice",
+      "questionText": "Qual tipo de JOIN retorna apenas as linhas que têm correspondência em ambas as tabelas?",
+      "options": ["LEFT JOIN", "RIGHT JOIN", "FULL JOIN", "INNER JOIN"],
+      "correctAnswer": "INNER JOIN",
+      "explanation": "`INNER JOIN` retorna registros quando há pelo menos uma correspondência em ambas as tabelas.",
+      "difficulty": "easy",
+      "tags": ["sql", "join"]
+    },
+    {
+      "id": "sql008",
+      "type": "multiple_choice",
+      "questionText": "Qual função de agregação SQL calcula a média de um conjunto de valores?",
+      "options": ["SUM()", "COUNT()", "AVG()", "MAX()"],
+      "correctAnswer": "AVG()",
+      "explanation": "A função `AVG()` retorna o valor médio de uma coluna numérica.",
+      "difficulty": "hard",
+      "tags": ["sql", "aggregate function"]
+    },
+    {
+      "id": "sql009",
+      "type": "true_false",
+      "questionText": "O comando `DROP TABLE` remove todos os registros de uma tabela, mas mantém a estrutura da tabela.",
+      "correctAnswer": "Falso",
+      "explanation": "`DROP TABLE` remove a tabela inteira do banco de dados, incluindo sua estrutura e todos os dados. Para remover apenas os dados, usa-se `TRUNCATE TABLE` ou `DELETE`.",
+      "difficulty": "medium",
+      "tags": ["sql", "drop", "truncate"]
+    },
+    {
+      "id": "sql010",
+      "type": "multiple_choice",
+      "questionText": "Qual cláusula é usada com funções de agregação para agrupar o conjunto de resultados por uma ou mais colunas?",
+      "options": ["ORDER BY", "WHERE", "HAVING", "GROUP BY"],
+      "correctAnswer": "GROUP BY",
+      "explanation": "A cláusula `GROUP BY` agrupa linhas que têm os mesmos valores em colunas especificadas em linhas de resumo.",
+      "difficulty": "hard",
+      "tags": ["sql", "group by"]
+    }
+  ]
+}

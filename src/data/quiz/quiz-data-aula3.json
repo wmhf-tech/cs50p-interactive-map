@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula3",
+  "moduleTitle": "Aula 3: Exceptions and File I/O",
+  "questions": [
+    {
+      "id": "ef001",
+      "type": "multiple_choice",
+      "questionText": "Qual bloco de código é usado para testar um bloco de código em busca de erros em Python?",
+      "options": ["catch", "try", "except", "finally"],
+      "correctAnswer": "try",
+      "explanation": "O bloco `try` permite testar um bloco de código em busca de erros.",
+      "difficulty": "easy",
+      "tags": ["exceptions", "try"]
+    },
+    {
+      "id": "ef002",
+      "type": "multiple_choice",
+      "questionText": "Qual palavra-chave é usada para lidar com o erro se ele ocorrer no bloco `try`?",
+      "options": ["catch", "handle", "except", "error"],
+      "correctAnswer": "except",
+      "explanation": "O bloco `except` é usado para lidar com o erro quando ele ocorre no bloco `try`.",
+      "difficulty": "easy",
+      "tags": ["exceptions", "except"]
+    },
+    {
+      "id": "ef003",
+      "type": "true_false",
+      "questionText": "É uma boa prática capturar todas as exceções usando um `except` genérico sem especificar o tipo de erro.",
+      "correctAnswer": "Falso",
+      "explanation": "É melhor capturar exceções específicas para lidar com elas de forma adequada e evitar mascarar erros inesperados.",
+      "difficulty": "medium",
+      "tags": ["exceptions", "best practices"]
+    },
+    {
+      "id": "ef004",
+      "type": "multiple_choice",
+      "questionText": "Qual modo de abertura de arquivo é usado para escrita, criando o arquivo se ele não existir e truncando-o se existir?",
+      "options": ["r", "a", "w", "x"],
+      "correctAnswer": "w",
+      "explanation": "O modo `w` (write) abre um arquivo para escrita. Se o arquivo existir, seu conteúdo é truncado. Se não existir, um novo arquivo é criado.",
+      "difficulty": "medium",
+      "tags": ["file io", "write"]
+    },
+    {
+      "id": "ef005",
+      "type": "multiple_choice",
+      "questionText": "Qual palavra-chave garante que um bloco de código será executado, independentemente de ocorrer uma exceção ou não?",
+      "options": ["else", "finally", "always", "ensure"],
+      "correctAnswer": "finally",
+      "explanation": "O bloco `finally` é executado sempre, seja o bloco `try` gerando uma exceção ou não.",
+      "difficulty": "medium",
+      "tags": ["exceptions", "finally"]
+    },
+    {
+      "id": "ef006",
+      "type": "true_false",
+      "questionText": "Após abrir um arquivo, é crucial fechá-lo para liberar os recursos do sistema.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Sempre feche os arquivos após o uso para evitar vazamento de recursos e corrupção de dados. O `with` statement é a forma recomendada.",
+      "difficulty": "easy",
+      "tags": ["file io", "best practices"]
+    },
+    {
+      "id": "ef007",
+      "type": "multiple_choice",
+      "questionText": "Qual é a vantagem de usar o `with` statement ao lidar com arquivos em Python?",
+      "options": ["Torna o código mais rápido", "Fecha o arquivo automaticamente", "Permite escrever em arquivos protegidos", "Abre arquivos em modo binário"],
+      "correctAnswer": "Fecha o arquivo automaticamente",
+      "explanation": "O `with` statement garante que o arquivo seja fechado automaticamente, mesmo que ocorram erros.",
+      "difficulty": "easy",
+      "tags": ["file io", "with statement"]
+    },
+    {
+      "id": "ef008",
+      "type": "multiple_choice",
+      "questionText": "Qual exceção é levantada quando se tenta acessar um índice fora dos limites de uma lista?",
+      "options": ["KeyError", "ValueError", "IndexError", "TypeError"],
+      "correctAnswer": "IndexError",
+      "explanation": "`IndexError` é levantada quando uma sequência (como uma lista ou tupla) está fora do intervalo de índices válidos.",
+      "difficulty": "hard",
+      "tags": ["exceptions", "list"]
+    },
+    {
+      "id": "ef009",
+      "type": "true_false",
+      "questionText": "É possível capturar diferentes tipos de exceções com múltiplos blocos `except`.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Você pode ter vários blocos `except` para lidar com diferentes tipos de exceções de maneiras distintas.",
+      "difficulty": "easy",
+      "tags": ["exceptions", "multiple except"]
+    },
+    {
+      "id": "ef010",
+      "type": "multiple_choice",
+      "questionText": "Qual método é usado para ler todo o conteúdo de um arquivo como uma única string?",
+      "options": ["readline()", "readlines()", "read()", "get_content()"],
+      "correctAnswer": "read()",
+      "explanation": "O método `read()` lê todo o conteúdo do arquivo e o retorna como uma única string.",
+      "difficulty": "medium",
+      "tags": ["file io", "read"]
+    }
+  ]
+}
