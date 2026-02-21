@@ -1,0 +1,103 @@
+{
+  "moduleId": "cs50p-aula0",
+  "moduleTitle": "Aula 0: Funções e Variáveis",
+  "questions": [
+    {
+      "id": "func001",
+      "type": "multiple_choice",
+      "questionText": "O que é uma função em programação?",
+      "options": ["Um bloco de código reutilizável", "Uma variável especial", "Um tipo de dado", "Uma instrução de controle"],
+      "correctAnswer": "Um bloco de código reutilizável",
+      "explanation": "Uma função é um bloco de código reutilizável que realiza uma tarefa específica e pode ser chamada múltiplas vezes.",
+      "difficulty": "easy",
+      "tags": ["functions", "basics"]
+    },
+    {
+      "id": "func002",
+      "type": "multiple_choice",
+      "questionText": "Qual é a sintaxe correta para definir uma função em Python?",
+      "options": ["def function_name():", "function function_name():", "func function_name():", "define function_name():"],
+      "correctAnswer": "def function_name():",
+      "explanation": "Em Python, usamos a palavra-chave `def` seguida pelo nome da função e parênteses para definir uma função.",
+      "difficulty": "easy",
+      "tags": ["functions", "syntax"]
+    },
+    {
+      "id": "func003",
+      "type": "true_false",
+      "questionText": "Uma função em Python sempre deve retornar um valor.",
+      "correctAnswer": "Falso",
+      "explanation": "Funções em Python não precisam retornar um valor. Se não houver uma instrução `return`, a função retorna `None` implicitamente.",
+      "difficulty": "easy",
+      "tags": ["functions", "return"]
+    },
+    {
+      "id": "var001",
+      "type": "multiple_choice",
+      "questionText": "O que é uma variável?",
+      "options": ["Um espaço na memória para armazenar dados", "Um tipo de função", "Uma constante imutável", "Uma instrução de loop"],
+      "correctAnswer": "Um espaço na memória para armazenar dados",
+      "explanation": "Uma variável é um espaço nomeado na memória que armazena um valor que pode ser alterado durante a execução do programa.",
+      "difficulty": "easy",
+      "tags": ["variables", "basics"]
+    },
+    {
+      "id": "var002",
+      "type": "multiple_choice",
+      "questionText": "Qual é a regra correta para nomear uma variável em Python?",
+      "options": ["Pode começar com números", "Deve começar com letra ou underscore", "Pode conter espaços", "Deve ser sempre em maiúsculas"],
+      "correctAnswer": "Deve começar com letra ou underscore",
+      "explanation": "Em Python, nomes de variáveis devem começar com uma letra (a-z, A-Z) ou underscore (_), seguidos por letras, números ou underscores.",
+      "difficulty": "medium",
+      "tags": ["variables", "naming"]
+    },
+    {
+      "id": "var003",
+      "type": "true_false",
+      "questionText": "Em Python, o tipo de uma variável é determinado no momento da declaração.",
+      "correctAnswer": "Falso",
+      "explanation": "Python é uma linguagem dinamicamente tipada. O tipo de uma variável é determinado pelo valor atribuído a ela, não na declaração.",
+      "difficulty": "medium",
+      "tags": ["variables", "types"]
+    },
+    {
+      "id": "func004",
+      "type": "multiple_choice",
+      "questionText": "O que são parâmetros de uma função?",
+      "options": ["Valores retornados pela função", "Variáveis que recebem valores quando a função é chamada", "Instruções dentro da função", "Comentários da função"],
+      "correctAnswer": "Variáveis que recebem valores quando a função é chamada",
+      "explanation": "Parâmetros são variáveis que uma função aceita como entrada. Quando você chama a função, passa argumentos que são atribuídos aos parâmetros.",
+      "difficulty": "medium",
+      "tags": ["functions", "parameters"]
+    },
+    {
+      "id": "func005",
+      "type": "true_false",
+      "questionText": "Uma função pode ter múltiplos parâmetros separados por vírgulas.",
+      "correctAnswer": "Verdadeiro",
+      "explanation": "Sim, uma função pode ter múltiplos parâmetros. Eles são separados por vírgulas na definição: `def func(param1, param2, param3):`",
+      "difficulty": "easy",
+      "tags": ["functions", "parameters"]
+    },
+    {
+      "id": "var004",
+      "type": "multiple_choice",
+      "questionText": "Qual é o escopo de uma variável local?",
+      "options": ["Disponível em todo o programa", "Disponível apenas dentro da função onde foi definida", "Disponível apenas no módulo", "Disponível apenas na classe"],
+      "correctAnswer": "Disponível apenas dentro da função onde foi definida",
+      "explanation": "Uma variável local é criada dentro de uma função e só pode ser acessada dentro dessa função. Fora da função, ela não existe.",
+      "difficulty": "hard",
+      "tags": ["variables", "scope"]
+    },
+    {
+      "id": "func006",
+      "type": "multiple_choice",
+      "questionText": "O que acontece quando você chama uma função sem fornecer um argumento obrigatório?",
+      "options": ["A função usa um valor padrão", "O programa executa normalmente", "Python gera um erro TypeError", "A função retorna None"],
+      "correctAnswer": "Python gera um erro TypeError",
+      "explanation": "Se uma função requer um parâmetro e você não fornecer um argumento ao chamá-la, Python gera um erro TypeError indicando argumentos faltantes.",
+      "difficulty": "hard",
+      "tags": ["functions", "errors"]
+    }
+  ]
+}

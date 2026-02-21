@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import QuizProgressUI from '../components/QuizProgressUI'; // Reutilizamos o componente de progresso, talvez adaptado ou um novo
+import { useCallback, useEffect, useState } from 'react';
+import QuizProgressUI from '../components/QuizProgressUI';
 import {
   allQuizModules,
   selectGeneralQuizQuestions,
   loadUserProgress,
   saveUserProgress,
   Question,
+  QuizModule,
   UserModuleProgress,
   UserQuizProgressData,
   UserQuestionProgress
@@ -17,7 +18,7 @@ import QuizQuestion from '../components/QuizQuestion';
 // Novo componente para exibir o progresso geral
 interface QuizProgressOverviewProps {
   allUserProgress: UserQuizProgressData;
-  allQuizModules: Question[];
+  allQuizModules: QuizModule[];
 }
 
 const QuizProgressOverview: React.FC<QuizProgressOverviewProps> = ({ allUserProgress, allQuizModules }) => {
@@ -99,7 +100,7 @@ const GeneralQuizContainer: React.FC = () => {
   }, [allUserProgress]);
 
   const startNewGeneralQuizAttempt = useCallback(() => {
-    const selectedQuestions = selectGeneralQuizQuestions(allQuizModules, allUserProgress, 10); // 10 questões para o quiz geral
+    const selectedQuestions = selectGeneralQuizQuestions(allQuizModules, allUserProgress, 10);
     setCurrentQuizQuestions(selectedQuestions);
     setCurrentQuestionIndex(0);
     setQuizAttemptResults([]);
@@ -141,7 +142,6 @@ const GeneralQuizContainer: React.FC = () => {
     } else {
       // Quiz finalizado
       setShowQuiz(false);
-      // Aqui você pode exibir um resumo do quiz geral
     }
   }, [currentQuestionIndex, currentQuizQuestions.length]);
 

@@ -216,5 +216,15 @@ export const allQuizModules: QuizModule[] = [
   quizDataAula10 as QuizModule,
 ];
 
-// Exporta o quizData da Aula 0 diretamente para compatibilidade com o container existente
+// Exporta cada módulo de aula para compatibilidade com os containers existentes
 export const aula0QuizModule: QuizModule = quizDataAula0 as QuizModule;
+export const aula1QuizModule: QuizModule = quizDataAula1 as QuizModule;
+export const aula2QuizModule: QuizModule = quizDataAula2 as QuizModule;
+export const aula3QuizModule: QuizModule = quizDataAula3 as QuizModule;
+export const aula4QuizModule: QuizModule = quizDataAula4 as QuizModule;
+export const aula5QuizModule: QuizModule = quizDataAula5 as QuizModule;
+export const aula6QuizModule: QuizModule = quizDataAula6 as QuizModule;
+export const aula7QuizModule: QuizModule = quizDataAula7 as QuizModule;
+export const aula8QuizModule: QuizModule = quizDataAula8 as QuizModule;
+export const aula9QuizModule: QuizModule = quizDataAula9 as QuizModule;
+export const aula10QuizModule: QuizModule = quizDataAula10 as QuizModule;

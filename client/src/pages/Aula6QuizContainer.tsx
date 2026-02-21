@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import QuizProgressUI from '../components/QuizProgressUI';
+import QuizModuleProgress from "../components/QuizModuleProgress";
 import QuizQuestion from '../components/QuizQuestion';
 import {
   aula6QuizModule, // Importa o módulo específico da Aula 6
@@ -65,7 +65,7 @@ const Aula6QuizContainer: React.FC = () => {
     <div className="min-h-screen bg-gray-900 flex items-center justify-center p-4">
       {!showQuiz ? (
         <div className="space-y-6 w-full max-w-md">
-          <QuizProgressUI quizModule={aula6QuizModule} userProgress={userProgress} />
+          <QuizModuleProgress quizModule={aula6QuizModule} userProgress={userProgress} />
           <div className="text-center">
             <button
               onClick={startNewQuizAttempt}
